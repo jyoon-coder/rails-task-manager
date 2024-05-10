@@ -1,0 +1,9 @@
+<div class="container">
+  <h1><%= @task.title %></h1>
+  <p><%=  @task.details %></p>
+  <p>
+    <%= link_to '❌', task_path(@task), data: { turbo_method: :delete, turbo_confirm: "Delete #{@task.title}?" } %>
+    <%= link_to 'Tasks', tasks_path, class: 'btn btn-light'  %>
+    <%= link_to 'Edit', edit_task_path(@task), class: 'btn btn-light'  %>
+  </p>
+</div>
